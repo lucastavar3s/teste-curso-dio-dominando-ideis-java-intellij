@@ -13,6 +13,43 @@ public class PrimeiroPrograma {
         gato.setCor("preto");
         gato.setIdade(2);
 
+        Livro livro1 = new Livro("Revolução dos bichos", 300);
+        System.out.println(livro1);
+
         System.out.println(gato);
+    }
+}
+
+class Livro {
+    String nome;
+    Integer paginas;
+
+    public Livro(String nome, Integer paginas) {
+        this.nome = nome;
+        this.paginas = paginas;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "nome='" + nome + '\'' +
+                ", paginas=" + paginas +
+                '}';
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(Integer paginas) {
+        this.paginas = paginas;
     }
 }
